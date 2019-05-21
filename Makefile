@@ -3,13 +3,13 @@ NAUTY_VERSION=nauty26r11
 
 all: nauty_wrapper.so test
 
-nauty26r11.tar.gz :
+${NAUTY_VERSION}.tar.gz :
 		wget http://pallini.di.uniroma1.it/${NAUTY_VERSION}.tar.gz
         
 nauty/nauty.a : ${NAUTY_VERSION}.tar.gz
 		rm -rf nauty && \
 		tar xzf ${NAUTY_VERSION}.tar.gz && \
-		mv nauty26r11 nauty && \
+		mv ${NAUTY_VERSION} nauty && \
 		cd nauty && \
 		CFLAGS="-O3 -fPIC" ./configure && \
 		make
@@ -26,5 +26,5 @@ nauty_wrapper.so : nauty_wrapper.o
 .PHONY: clean
 
 clean:
-		rm -r nauty_wrapper.o nauty_wrapper.so nauty nauty26r11.tar.gz
+		rm -r nauty_wrapper.o nauty_wrapper.so nauty ${NAUTY_VERSION}.tar.gz
 
