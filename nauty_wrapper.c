@@ -122,6 +122,3 @@ extern int canonical_labeling(
     DYNFREE( orbits, orbits_sz );
 }
 
-/*
-*/
-
