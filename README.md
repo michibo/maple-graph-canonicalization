@@ -18,9 +18,9 @@ to download nauty from http://pallini.di.uniroma1.it/, compile it and also compi
 Maple
 =====
 
-The file script.mpl contains a working example. Briefly, use
+The file script.mpl contains a working example. 
 
-Use the command 
+Use the command *define_external* to load the plugin:
 
 ~~~~
 canonical_labeling := define_external('canonical_labeling', \
