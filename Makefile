@@ -1,5 +1,5 @@
 
-NAUTY_VERSION=nauty26r11
+NAUTY_VERSION=nauty26r12
 
 all: nauty_wrapper.so test
 
